@@ -8,5 +8,9 @@ dependencies = [
     "dotenv>=0.9.9",
     "langchain>=1.2.0",
     "langchain-openai>=1.1.6",
-    "langgraph-cli>=0.4.11",
+    "langgraph-cli[inmem]>=0.4.11",
 ]
+
+[tool.langgraph]
+build_command = "langgraph build"
+output_dir = "dist"
