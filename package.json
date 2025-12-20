@@ -5,15 +5,15 @@
   "main": "dist/index.js",
   "scripts": {
     "build": "tsc",
-    "start": "node dist/index.js",
-    "dev": "nodemon src/index.ts",
+    "start": "pkill -f 'node.*2024' 2>/dev/null || true && sleep 1 && npx @langchain/langgraph-cli up",
+    "dev": "pkill -f 'node.*2024' 2>/dev/null || true && sleep 1 && npx @langchain/langgraph-cli dev",
     "clean": "rm -rf dist",
     "test": "jest",
     "test:watch": "jest --watch",
     "install:deps": "pnpm install",
     "add:dep": "pnpm add",
     "add:dev": "pnpm add -D",
-    "langgraph:dev": "langgraph dev",
+    "langgraph:dev": "pkill -f 'node.*2024' 2>/dev/null || true && sleep 1 && npx @langchain/langgraph-cli dev",
     "langgraph:build": "langgraph build"
   },
   "keywords": [
