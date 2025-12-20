@@ -1,7 +1,7 @@
 {
   "dependencies": ["."],
   "graphs": {
-    "agent": "./src/agents/weather_agent.py:agent"
+    "agent": "./src/agents/weather-agent.ts:weatherAgent"
   },
   "env": ".env"
 }
